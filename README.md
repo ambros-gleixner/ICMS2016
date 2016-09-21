@@ -7,7 +7,7 @@ ICMS 2016: [Home](http://icms2016.zib.de), [Sessions](http://icms2016.zib.de/ses
 ## Organizers
 
 * [Ambros Gleixner](http://www.zib.de/gleixner), Zuse Institute Berlin, Germany
-* [Christian Kirches](http://www.iwr.uni-heidelberg.de/groups/optimus/people/kirches), IWR Heidelberg/TU Braunschweig, Germany
+* [Christian Kirches](http://www.iwr.uni-heidelberg.de/groups/optimus/people/kirches/), IWR Heidelberg/TU Braunschweig, Germany
 * [John Mitchell](http://www.rpi.edu/~mitchj), Rensselaer Polytechnic Institute, USA
 * [Ted Ralphs](http://coral.ie.lehigh.edu/~ted), Lehigh University, USA
 
@@ -89,9 +89,7 @@ While Excel makes it easy to build optimisation models, these models can be diff
 
 Authors: Miles Lubin, [J. A. Julian Hall](http://www.maths.ed.ac.uk/hall), Cosmin G. Petra, and Mihai Anitescu
 
-Although parallel efficiency using the revised simplex method has not been achieved for general large sparse LP problems, this talk will show how the particular structure of stochastic LP problems gives scope for efficient data parallelism.
-
-Very large stochastic LP problems have been considered to be too big to solve with the simplex method, with decomposition approaches or, more recently, interior-point methods being preferred. However, these approaches do not provide optimal basic solutions which allow for the efficient hot-starts required, for example, in a branch-and-bound context when solving stochastic MIP problems.
+Although parallel efficiency using the revised simplex method has not been achieved for general large sparse LP problems, this talk will show how the particular structure of stochastic LP problems gives scope for efficient data parallelism. Very large stochastic LP problems have been considered to be too big to solve with the simplex method, with decomposition approaches or, more recently, interior-point methods being preferred. However, these approaches do not provide optimal basic solutions which allow for the efficient hot-starts required, for example, in a branch-and-bound context when solving stochastic MIP problems.
 
 Our approach exploits the dual block-angular structure of these problems inside the linear algebra of the revised simplex method in a manner suitable for high-performance distributed-memory clusters or supercomputers. While the focus is on stochastic LPs, the work is applicable to all problems with a dual block-angular structure. Our implementation is competitive in serial with highly efficient sparsity-exploiting simplex codes and achieves parallel efficiency when using up to 128 cores and runs up to 100 times faster than the leading open-source serial solver. Additionally, very large problems with hundreds of millions of variables have been successfully solved to optimality: possibly the largest LPs ever solved using the simplex method.
 
@@ -219,7 +217,7 @@ This special issue is dedicated, but not limited to the ICMS 2016 Session on Mat
 ### Guest Editors
 
 * [Ambros Gleixner](http://www.zib.de/gleixner), Zuse Institute Berlin, Germany
-* [Christian Kirches](http://www.iwr.uni-heidelberg.de/groups/optimus/people/kirches), IWR Heidelberg/TU Braunschweig, Germany
+* [Christian Kirches](http://www.iwr.uni-heidelberg.de/groups/optimus/people/kirches/), IWR Heidelberg/TU Braunschweig, Germany
 * [John Mitchell](http://www.rpi.edu/~mitchj), Rensselaer Polytechnic Institute, USA
 * [Ted Ralphs](http://coral.ie.lehigh.edu/~ted), Lehigh University, USA
 
