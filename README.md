@@ -210,7 +210,11 @@ We formulate this minimization with AIC as Mixed Integer Nonlinear Programming (
 
 ## Call for Papers: Special Issue of Optimization Methods and Software
 
-Papers on the topic of **MATHEMATICAL OPTIMIZATION SOFTWARE** will be considered for peer-reviewed publication in a special issue of the journal [Optimization Methods and Software](http://www.tandfonline.com/goms). The journal impact factor is 1.624, and the yearly best publication in OMS is awarded the [Charles Broyden prize](http://explore.tandfonline.com/page/est/charles-broyden-prize). The quality and topics of the submissions should correspond to the high standards of publications in OMS and its aims and scope, see http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=goms20.
+Papers on the topic of **MATHEMATICAL OPTIMIZATION SOFTWARE** will be considered for peer-reviewed publication in a special issue of the journal [Optimization Methods and Software](http://www.tandfonline.com/goms).
+
+![OMS cover](omscover.jpg)
+
+The journal impact factor is 1.624, and the yearly best publication in OMS is awarded the [Charles Broyden prize](http://explore.tandfonline.com/page/est/charles-broyden-prize). The quality and topics of the submissions should correspond to the high standards of publications in OMS and its aims and scope, see http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=goms20.
 
 This special issue is dedicated, but not limited to the ICMS 2016 Session on Mathematical Optimization, which was held as part of the [5th International Congress on Mathematical Software](http://icms2016.zib.de/TODO), July 11-14, 2016, at Zuse Institute Berlin.
 
