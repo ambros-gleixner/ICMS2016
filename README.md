@@ -2,7 +2,7 @@
 
 ICMS 2016: [Home](http://icms2016.zib.de), [Sessions](http://icms2016.zib.de/sessions.html)
 
-> Deadline extension: **November 15, 2016** for submission to our [Special Issue of Optimization Methods & Software](#call-for-papers-special-issue-of-optimization-methods-and-software) on "Mathematical Optimization Software", see below.
+> Deadline extension: **NOVEMBER 15, 2016** for submission to our [Special Issue of Optimization Methods & Software](#call-for-papers-special-issue-of-optimization-methods-and-software) on /Mathematical Optimization Software/, see below.
 
 ## Organizers
 
@@ -44,15 +44,17 @@ A **special issue** of the journal *Optimization Methods & Software* consisting 
 
 ## Talks & Abstracts
 
-#### Monday, July 11, 16:00-17:40
+### Monday, July 11, 16:00-17:40
 
-##### Recent developments in Optimization Services (OS)
-###### Authors: [Horand I. Gassmann](http://myweb.dal.ca/gassmann), Jun Ma, Kipp Martin, and Imre Polik
+#### Recent developments in Optimization Services (OS)
+
+Authors: [Horand I. Gassmann](http://myweb.dal.ca/gassmann), Jun Ma, Kipp Martin, and Imre Polik
+
 Optimization Services (OS) is an open-source project under COIN-OR and provides infrastructure for the solution of optimization problems over the internet. This includes a number of XML schemas for the transmission of problem instances, options and solutions as well as related information; and interfaces to a number of open-source and commercial solvers.  This talk presents recent developments, such as support for the description of matrices within the OSiL format, an interface to the open-source SDP solver CSDP, and schema elements to describe real-time data elements, problem modifications, disjunctions, and stochastic information.
 
 #####  CMPL (<Coliop|Coi> Mathematical Programming Language)
 ###### Authors: [Ted Ralphs](http://coral.ie.lehigh.edu/~ted) and [Mike Steglich](https://www.th-wildau.de/homepages/mike-steglich/ms-startseite.html)
-###### Slides: [steglich_slides.pdf](steglich_slides.pdf)
+###### Slides: [steglich.pdf](slides/steglich_slides.pdf)
 CMPL is a system for mathematical programming and optimisation of linear optimisation problems using popular solvers such as CBC, GLPK, SCIP, Gurobi and CPLEX.  After an overview of the main functionality and the features of the language, CMPL's application programming interfaces for Python and Java (pyCMPL and jCMPL) will be presented. The next step will describe how CMPL, pyCMPL and jCMPL can be used with the CMPLServer; an XML-RPC-based web service for distributed and grid optimisation. The talk will finish with an overview of the main aspects of CMPL's integration with SolverStudio and it will be shown how CMPL and pyCMPL models can be solved within Excel and SolverStudio.
 
 ##### PySCIPOpt: Mathematical Programming in Python with the SCIP Optimization Suite
@@ -85,7 +87,7 @@ This is the largest-scale parallel sparsity-exploiting revised simplex implement
 
 ##### Parallelization of the FICO Xpress Optimizer
 ###### Authors: [Timo Berthold](http://www.zib.de/berthold), James Farmer, Stefan Heinz, and Michael Perregaard
-###### Slides: [berthold_slides.pdf](berthold_slides.pdf)
+###### Slides: [berthold.pdf](slides/berthold_slides.pdf)
 We will present some of the recent MIP advances in the FICO Xpress Optimizer, with an emphasis on its new parallelization concept. To achieve reasonable speedups from parallelization, a high workload of the available computational resources is a natural precondition. At the same time, reproducibility and reliability are key requirements for mathematical optimization software. Thus, parallel LP-based branch-and-bound algorithm are expected to be fully deterministic. The resulting synchronization latencies render the goal of a satisfying workload a challenge of its own. We address this challenge by following a partial information approach and separating the concepts of simultaneous tasks and independent threads from each other. Our computational results indicate that this leads to a much higher CPU workload and thereby to an improved scaling on modern high-performance CPUs. As an added value, the solution path that the Optimizer takes is not only deterministic in a fixed environment, but on top of that platform- and, to a certain extent, thread-independent.
 
 ##### A First Implementation of ParaXpress: Combining Internal and External Parallelization to Solve MIPs on Supercomputers
@@ -94,7 +96,7 @@ The Ubiquity Generator (UG) is a general framework for the external parallelizat
 
 ##### pyADCG: A preliminary implementation of a new parallel solver for nonconvex MINLPs in Pyomo/Python
 ###### Authors: [Ivo Nowak](https://www.haw-hamburg.de/ti-mp/unser-department/beschaeftigte/name/ivo-nowak.html) and Norman Breitfeld
-###### Slides: [nowakbreitfeld_slides.pdf](nowakbreitfeld_slides.pdf)
+###### Slides: [nowakbreitfeld.pdf](slides/nowakbreitfeld_slides.pdf)
 In this talk we present pyADCG, a preliminary implementation of a new parallel decomposition method for nonconvex MINLPs in Pyomo/Python. The new optimization method, called ADCG (Alternating Direction Column Generation), is not based on the branch-and-bound approach. The basic idea of ADCG is to restrict the objective value by a target constraint and to check via a column generation based globally convergent alternating direction method if the resulting MINLP is feasible or not.  Convergence is shown by using the fact that the duality gap of a general nonconvex projection problem is zero, see http://www.optimization-online.org/DB_HTML/2015/12/5233.html.  We discuss algorithmic variants and report first numerical results.
 
 ##### Advanced Computing & Optimization Infrastructure for Extremely Large-Scale Graphs on Post Peta-Scale Supercomputers
@@ -120,7 +122,7 @@ This work contains several computational tests showing that the REF framework so
 
 ##### On Solution Algorithms for Time-Dependent Quasi-Variational Inequalities with Gradient Constraints
 ###### Authors: [Rafael Arndt](TODO), Michael Hintermueller, and Carlos N. Rautenberg
-###### Slides: [arndt_slides.pdf](arndt_slides.pdf)
+###### Slides: [arndt.pdf](slides/arndt_slides.pdf)
 We consider non-dissipative quasi-variational inequalities with pointwise constraints on the gradient of the state.  Such problems arise, for example, in the modeling of growing piles of cohesionless granular materials and water drainage on a given surface.  In these cases, the associated gradient constraint involves both a material-specific angle of repose and local properties of the concerned supporting structure.  Existence of a solution is shown and appropriate regularizations for numerical realization are adressed. For this type of non-convex problems, we derive solution algorithms in function space, considering two approaches: a variable splitting method, resulting in an alternating minimization scheme, and a semismooth Newton method.  Convergence results are shown in both cases.  Additionally we provide counter-examples to popular approaches when dealing with quasi-variational inequalities of this type. Numerical experiments of sandpile growth and of water drainage for certain topologies are presented.
 
 ##### Global error control for Optimal Control problems
@@ -135,7 +137,7 @@ Solving the Trust-Region Subproblem constitues an important ingredient in modern
 
 ##### SCIP-SDP: A Framework for Solving Mixed-Integer Semidefinite Programs
 ###### Authors: [Tristan Gally](http://www3.mathematik.tu-darmstadt.de/index.php?id=2575), Marc E. Pfetsch, and Stefan Ulbrich
-###### Slides: [gally_slides.pdf](gally_slides.pdf)
+###### Slides: [gally.pdf](slides/gally_slides.pdf)
 Mixed-integer semidefinite programs arise in many applications and several problem-specific solution approaches have been studied recently. In this talk, we present a generic branch-and-bound framework for solving such problems.
 
 We will first give a short overview of applications of mixed-integer semidefinite programming, including truss topology design, cardinality constrained least squares and minimum k-partitioning. Afterwards, we will investigate the strong duality of semidefinite relaxations arising in a branch-and-bound context. Furthermore, we will discuss strategies for enhancing the solution process of a branch-and-bound approach to mixed-integer semidefinite programming, including branching, dual fixing and heuristics. Finally, we will present numerical results demonstrating the applicability of the proposed framework and the success of the proposed techniques.
