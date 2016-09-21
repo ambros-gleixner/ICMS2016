@@ -1,0 +1,69 @@
+CALL FOR PAPERS - EXTENDED DEADLINE
+===================================
+
+Papers on the topic of
+
+                 MATHEMATICAL OPTIMIZATION SOFTWARE
+
+will be considered for peer-reviewed publication in a special issue
+of the journal Optimization Methods and Software (OMS):
+
+  http://www.tandfonline.com/goms
+
+The journal impact factor is 1.624, and the yearly best publication
+in OMS is awarded the Charles Broyden prize:
+
+  http://explore.tandfonline.com/page/est/charles-broyden-prize
+
+The quality and topics of the submissions should correspond to the
+high standards of publications in OMS and its aims and scope:
+
+http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=goms20
+
+
+This special issue is dedicated, but not limited to the ICMS 2016
+Session on Mathematical Optimization
+
+  http://events.zib.de/ICMS_MathOpt_2016
+
+which was held as part of the 5th International Congress on
+Mathematical Software, July 11-14, 2016, at Zuse Institute Berlin.
+
+
+Guest Editors
+=============
+
+Ambros Gleixner (Zuse Institute Berlin, Germany)
+http://www.zib.de/gleixner/
+
+Christian Kirches (IWR Heidelberg/TU Braunschweig, Germany)
+http://www.iwr.uni-heidelberg.de/groups/optimus/people/kirches/
+
+John Mitchell (Rensselaer Polytechnic Institute, USA)
+http://www.rpi.edu/~mitchj/
+
+Ted Ralphs (Lehigh University, USA)
+http://coral.ie.lehigh.edu/~ted/
+
+Contact: icms_mathopt_2016@zib.de
+
+
+Submission Guidelines
+=====================
+
+The deadline for submission to the special issue has been extended to
+
+  November 15, 2016.
+
+The authors are encouraged to keep the papers within 25 journal pages.
+Submissions should follow the journal's style and guidelines under
+
+http://www.tandfonline.com/action/authorSubmission?journalCode=goms20&page=instructions
+
+Manuscript submission must be made online via the journal's
+ScholarOne Manuscripts site
+
+  http://mc.manuscriptcentral.com/goms
+
+To specify the special issue, please choose the abbreviation "MOS"
+under step 5 of the submission process.
