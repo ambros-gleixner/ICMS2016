@@ -2,7 +2,7 @@
 
 ICMS 2016: [Home](http://icms2016.zib.de), [Sessions](http://icms2016.zib.de/sessions.html)
 
-> Deadline extension: **NOVEMBER 15, 2016** for submission to our [Special Issue of Optimization Methods & Software](#call-for-papers-special-issue-of-optimization-methods-and-software) on *Mathematical Optimization Software*, see below.
+> Deadline extension: **NOVEMBER 15, 2016** for submission to our [Special Issue of Optimization Methods & Software](#call-for-papers-special-issue-of-optimization-methods-and-software) on *Mathematical Optimization Software*, see below. ![OMS cover](omscover.jpg)
 
 ## Organizers
 
