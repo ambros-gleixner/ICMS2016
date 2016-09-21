@@ -52,9 +52,10 @@ Authors: [Horand I. Gassmann](http://myweb.dal.ca/gassmann), Jun Ma, Kipp Martin
 
 Optimization Services (OS) is an open-source project under COIN-OR and provides infrastructure for the solution of optimization problems over the internet. This includes a number of XML schemas for the transmission of problem instances, options and solutions as well as related information; and interfaces to a number of open-source and commercial solvers.  This talk presents recent developments, such as support for the description of matrices within the OSiL format, an interface to the open-source SDP solver CSDP, and schema elements to describe real-time data elements, problem modifications, disjunctions, and stochastic information.
 
-#### CMPL (\<Coliop|Coi>\ Mathematical Programming Language)
+#### CMPL (\<Coliop|Coi\> Mathematical Programming Language)
 
-Authors: [Ted Ralphs](http://coral.ie.lehigh.edu/~ted) and [Mike Steglich](https://www.th-wildau.de/homepages/mike-steglich/ms-startseite.html) ([Slides](slides/steglich.pdf))
+Authors: [Ted Ralphs](http://coral.ie.lehigh.edu/~ted) and [Mike Steglich](https://www.th-wildau.de/homepages/mike-steglich/ms-startseite.html)
+Slides: slides/steglich.pdf
 
 CMPL is a system for mathematical programming and optimisation of linear optimisation problems using popular solvers such as CBC, GLPK, SCIP, Gurobi and CPLEX.  After an overview of the main functionality and the features of the language, CMPL's application programming interfaces for Python and Java (pyCMPL and jCMPL) will be presented. The next step will describe how CMPL, pyCMPL and jCMPL can be used with the CMPLServer; an XML-RPC-based web service for distributed and grid optimisation. The talk will finish with an overview of the main aspects of CMPL's integration with SolverStudio and it will be shown how CMPL and pyCMPL models can be solved within Excel and SolverStudio.
 
