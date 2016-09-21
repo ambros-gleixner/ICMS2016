@@ -47,7 +47,6 @@ A **special issue** of the journal *Optimization Methods & Software* consisting 
 ### Monday, July 11, 16:00-17:40
 
 #### Recent developments in Optimization Services (OS)
-
 ##### Authors: [Horand I. Gassmann](http://myweb.dal.ca/gassmann), Jun Ma, Kipp Martin, and Imre Polik
 
 Optimization Services (OS) is an open-source project under COIN-OR and provides infrastructure for the solution of optimization problems over the internet. This includes a number of XML schemas for the transmission of problem instances, options and solutions as well as related information; and interfaces to a number of open-source and commercial solvers.  This talk presents recent developments, such as support for the description of matrices within the OSiL format, an interface to the open-source SDP solver CSDP, and schema elements to describe real-time data elements, problem modifications, disjunctions, and stochastic information.
