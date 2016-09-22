@@ -131,44 +131,13 @@ We also present our parallel implementation for large-scale SDP (SemiDefinite Pr
 
 ### Tuesday, July 12, 14:20-16:00
 
-#### High-Precision Quadratic Programming by Iterative Refinement
+#### Mixed Integer Nonlinear Programming for Minimization of Akaike's Information Criterion
 
-Authors: Ambros Gleixner, Sebastian Sager, and [Tobias Weber](https://www.math.uni-magdeburg.de/institute/imo/ag_sager/PEOPLE/Weber)
+Authors: [Keiji Kimura](http://www.imi.kyushu-u.ac.jp/eng) and Hayato Waki
 
-Quadratic programming (QP) problems are an important class of optimization problems arising in many applications. Usually it suffice to (and most QP solvers do) approximate the solution of the QP in floating-point arithmetic. However, it may be of interest to calculate solutions of higher precision. We present the extension of iterative refinement for linear programming to QP problems.
+Akaike's Information Criterion (AIC) is a measure of the quality of statistical model for a given set of data. We can obtain the best statistical model for the set of data by minimizing the AIC. Since this minimization is known as NP-hard, it is difficult to find the best statistical model in practice. Instead, stepwise methods, which are local search algorithms, are commonly used to find a better statistical model though it may not be the best.
 
-A sequence of similar QP problems with identical constraint and objective matrices is solved in floating-point arithmetics. These problems differ in the linear objective term, the right hand side of the constraints, and the bounds. Standard active set QP solvers should be used to solve them, preferably having hot (warm) start capabilities. Then, using exact arithmetic, the solution of each QP problem is used to improve the precision of the initial solution. It is also used to calculate a new refined QP problem for the next iteration. This procedure is repeated iteratively until the desired precision is reached.  We present first numerical results for convex QP instances using the qpOASES solver.
-
-#### Efficient Validation of Basic Solutions via the Roundoff-Error-Free Factorization Framework
-
-Authors: [Adolfo R. Escobedo](https://sites.google.com/site/adolfoescobedo1) and Erick Moreno-Centeno
-
-The Roundoff-Error-Free (REF) LU and Cholesky factorizations, combined with the REF substitution algorithms, allow systems of linear equations to be solved without accruing roundoff errors and without excessive matrix entry growth, thereby permitting linear and mixed-integer programming problems to be solved exactly and efficiently. These REF computational tools aim to make significant advances to the field of optimization for two reasons: (1) solutions yielded by commercial mathematical programming solvers do not come with a certificate of validity; (2) in-use exact solvers implement exact validation subroutines that rely on rational arithmetic which, unlike the featured framework, is hampered by its repeated use of expensive greatest common divisor operations to bound matrix entry growth.
-
-This work contains several computational tests showing that the REF framework solves systems of linear equations up to two orders of magnitude quicker than the exact rational arithmetic LU factorization method and requiring asymptotically half the memory. Moreover, we adapt Edmond’s integer-preserving Q-Matrix method to serve as a basic solution validation tool, and perform additional experiments that demonstrate that the REF factorization framework remains significantly superior in terms of memory requirements and computational effort.
-
-
-#### On Solution Algorithms for Time-Dependent Quasi-Variational Inequalities with Gradient Constraints
-
-Authors: [Rafael Arndt](TODO), Michael Hintermueller, and Carlos N. Rautenberg
-
-Slides: [slides/arndt.pdf](slides/arndt.pdf)
-
-We consider non-dissipative quasi-variational inequalities with pointwise constraints on the gradient of the state.  Such problems arise, for example, in the modeling of growing piles of cohesionless granular materials and water drainage on a given surface.  In these cases, the associated gradient constraint involves both a material-specific angle of repose and local properties of the concerned supporting structure.  Existence of a solution is shown and appropriate regularizations for numerical realization are adressed. For this type of non-convex problems, we derive solution algorithms in function space, considering two approaches: a variable splitting method, resulting in an alternating minimization scheme, and a semismooth Newton method.  Convergence results are shown in both cases.  Additionally we provide counter-examples to popular approaches when dealing with quasi-variational inequalities of this type. Numerical experiments of sandpile growth and of water drainage for certain topologies are presented.
-
-#### Global error control for Optimal Control problems
-
-Authors: [Andreas Meyer](https://typo.iwr.uni-heidelberg.de) and Andreas Potschka
-
-For the numerical solution of large-scale ODE and DAE constrained optimal control problems (OCPs), direct transcription methods like Direct Multiple Shooting and Collo- cation have been established as the methods of choice. In these approaches, the infinite dimensional OCP is suitably discretized in order to obtain a finite dimensional Nonlinear Programming Problem. However, the discretization is often performed with no or at most local control of the discretization error. In this contribution we propose an error controlled adaptive mesh refinement strategy for a particular pseudospectral collocation method. Our error estimator is based on duality principles and Galerkin orthogonality, which are the ba- sis of computing elementwise discretization error contributions to the global discretization error. The equilibration of local error contributions in combination with detection of non- smoothness of solutions leads to efficient collocation meshes and a corresponding sequence of NLPs with increasing dimensionality. The proposed methods have been implemented in a software package. Finally, we give an outlook on a pseudospectral collocation approach for switched optimal control problems that leads to a sequence of mixed-integer NLPs.
-
-#### Solving the Trust-Region Subproblem using Krylov subspace methods
-
-Authors: [Felix Lenders](https://typo.iwr.uni-heidelberg.de) and Christian Kirches
-
-Solving the Trust-Region Subproblem constitues an important ingredient in modern algorithms for nonlinear optimization problems. We present a method that builds on the successful GLTR algorithm (Gould et al 1999) in which expanding Krylov subspaces are iteratively assembled and a restricted version of the subproblem in these is solved. Particular attention is paid to the hard case and multiple invariant Krylov subspaces. We introduce an implementation of the method in C that employs a vector free reverse communication interface which allows to use adaptivity when solving functionspace problems and structure exploitation in lifted optimization problems as they commonly arise in optimal control.
-
-### Tuesday, July 12, 16:20-18:00
+We formulate this minimization with AIC as Mixed Integer Nonlinear Programming (MINLP), and propose a method to find the best statistical model. To solve this MINLP problem effectively, we implement a relaxator to find better lower bounds, heuristic algorithm to obtain better upper bounds, and branching rules for this minimization. We combine them with SCIP, which is a mathematical optimization software and a branch-and-bound framework. We show that the proposed method can provide the best statistical model for small-sized or medium-sized benchmark problems in UCI Machine Learning repository. Furthermore, we show that this method can find good quality solutions for large-sized benchmark problems.
 
 #### SCIP-SDP: A Framework for Solving Mixed-Integer Semidefinite Programs
 
@@ -204,13 +173,43 @@ Authors: Ralf Borndörfer, [Sebastian Schenker](http://www.zib.de/members/schenk
 
 PolySCIP is a new solver for multi-criteria integer as well as multi-criteria linear programs handling an arbitrary number of objectives. It is available as an official part of the non-commercial constraint integer programming framework SCIP. It utilizes a lifted weight space approach to compute the set of supported extreme non-dominated (SEN) points and unbounded non-dominated rays, respectively. The algorithmic approach can be summarized as follows: At the beginning an arbitrary SEN point is computed (or it is determined that there is none) and a weight space polyhedron created. In every next iteration a vertex of the weight space polyhedron is selected whose entries yield a single-objective optimization problem via a combination of the original objectives. If the optimization of this single-objective problem leads to a new SEN point, the weight space polyhedron is updated. Otherwise another vertex of the weight space polyhedron is investigated. The algorithm finishes if all vertices of the weight space polyhedron have been investigated and no update steps of the polyhedron are necessary anymore. The file format of PolySCIP is based on the widely used MPS format and allows a simple generation of multi-criteria models via an algebraic modelling language.
 
-#### Mixed Integer Nonlinear Programming for Minimization of Akaike's Information Criterion
+### Tuesday, July 12, 16:20-18:00
 
-Authors: [Keiji Kimura](http://www.imi.kyushu-u.ac.jp/eng) and Hayato Waki
+#### Efficient Validation of Basic Solutions via the Roundoff-Error-Free Factorization Framework
 
-Akaike's Information Criterion (AIC) is a measure of the quality of statistical model for a given set of data. We can obtain the best statistical model for the set of data by minimizing the AIC. Since this minimization is known as NP-hard, it is difficult to find the best statistical model in practice. Instead, stepwise methods, which are local search algorithms, are commonly used to find a better statistical model though it may not be the best.
+Authors: [Adolfo R. Escobedo](https://sites.google.com/site/adolfoescobedo1) and Erick Moreno-Centeno
 
-We formulate this minimization with AIC as Mixed Integer Nonlinear Programming (MINLP), and propose a method to find the best statistical model. To solve this MINLP problem effectively, we implement a relaxator to find better lower bounds, heuristic algorithm to obtain better upper bounds, and branching rules for this minimization. We combine them with SCIP, which is a mathematical optimization software and a branch-and-bound framework. We show that the proposed method can provide the best statistical model for small-sized or medium-sized benchmark problems in UCI Machine Learning repository. Furthermore, we show that this method can find good quality solutions for large-sized benchmark problems.
+The Roundoff-Error-Free (REF) LU and Cholesky factorizations, combined with the REF substitution algorithms, allow systems of linear equations to be solved without accruing roundoff errors and without excessive matrix entry growth, thereby permitting linear and mixed-integer programming problems to be solved exactly and efficiently. These REF computational tools aim to make significant advances to the field of optimization for two reasons: (1) solutions yielded by commercial mathematical programming solvers do not come with a certificate of validity; (2) in-use exact solvers implement exact validation subroutines that rely on rational arithmetic which, unlike the featured framework, is hampered by its repeated use of expensive greatest common divisor operations to bound matrix entry growth.
+
+This work contains several computational tests showing that the REF framework solves systems of linear equations up to two orders of magnitude quicker than the exact rational arithmetic LU factorization method and requiring asymptotically half the memory. Moreover, we adapt Edmond’s integer-preserving Q-Matrix method to serve as a basic solution validation tool, and perform additional experiments that demonstrate that the REF factorization framework remains significantly superior in terms of memory requirements and computational effort.
+
+#### High-Precision Quadratic Programming by Iterative Refinement
+
+Authors: Ambros Gleixner, Sebastian Sager, and [Tobias Weber](https://www.math.uni-magdeburg.de/institute/imo/ag_sager/PEOPLE/Weber)
+
+Quadratic programming (QP) problems are an important class of optimization problems arising in many applications. Usually it suffice to (and most QP solvers do) approximate the solution of the QP in floating-point arithmetic. However, it may be of interest to calculate solutions of higher precision. We present the extension of iterative refinement for linear programming to QP problems.
+
+A sequence of similar QP problems with identical constraint and objective matrices is solved in floating-point arithmetics. These problems differ in the linear objective term, the right hand side of the constraints, and the bounds. Standard active set QP solvers should be used to solve them, preferably having hot (warm) start capabilities. Then, using exact arithmetic, the solution of each QP problem is used to improve the precision of the initial solution. It is also used to calculate a new refined QP problem for the next iteration. This procedure is repeated iteratively until the desired precision is reached.  We present first numerical results for convex QP instances using the qpOASES solver.
+
+#### Global error control for Optimal Control problems
+
+Authors: [Andreas Meyer](https://typo.iwr.uni-heidelberg.de) and Andreas Potschka
+
+For the numerical solution of large-scale ODE and DAE constrained optimal control problems (OCPs), direct transcription methods like Direct Multiple Shooting and Collo- cation have been established as the methods of choice. In these approaches, the infinite dimensional OCP is suitably discretized in order to obtain a finite dimensional Nonlinear Programming Problem. However, the discretization is often performed with no or at most local control of the discretization error. In this contribution we propose an error controlled adaptive mesh refinement strategy for a particular pseudospectral collocation method. Our error estimator is based on duality principles and Galerkin orthogonality, which are the ba- sis of computing elementwise discretization error contributions to the global discretization error. The equilibration of local error contributions in combination with detection of non- smoothness of solutions leads to efficient collocation meshes and a corresponding sequence of NLPs with increasing dimensionality. The proposed methods have been implemented in a software package. Finally, we give an outlook on a pseudospectral collocation approach for switched optimal control problems that leads to a sequence of mixed-integer NLPs.
+
+#### On Solution Algorithms for Time-Dependent Quasi-Variational Inequalities with Gradient Constraints
+
+Authors: [Rafael Arndt](TODO), Michael Hintermueller, and Carlos N. Rautenberg
+
+Slides: [slides/arndt.pdf](slides/arndt.pdf)
+
+We consider non-dissipative quasi-variational inequalities with pointwise constraints on the gradient of the state.  Such problems arise, for example, in the modeling of growing piles of cohesionless granular materials and water drainage on a given surface.  In these cases, the associated gradient constraint involves both a material-specific angle of repose and local properties of the concerned supporting structure.  Existence of a solution is shown and appropriate regularizations for numerical realization are adressed. For this type of non-convex problems, we derive solution algorithms in function space, considering two approaches: a variable splitting method, resulting in an alternating minimization scheme, and a semismooth Newton method.  Convergence results are shown in both cases.  Additionally we provide counter-examples to popular approaches when dealing with quasi-variational inequalities of this type. Numerical experiments of sandpile growth and of water drainage for certain topologies are presented.
+
+#### Solving the Trust-Region Subproblem using Krylov subspace methods
+
+Authors: [Felix Lenders](https://typo.iwr.uni-heidelberg.de) and Christian Kirches
+
+Solving the Trust-Region Subproblem constitues an important ingredient in modern algorithms for nonlinear optimization problems. We present a method that builds on the successful GLTR algorithm (Gould et al 1999) in which expanding Krylov subspaces are iteratively assembled and a restricted version of the subproblem in these is solved. Particular attention is paid to the hard case and multiple invariant Krylov subspaces. We introduce an implementation of the method in C that employs a vector free reverse communication interface which allows to use adaptivity when solving functionspace problems and structure exploitation in lifted optimization problems as they commonly arise in optimal control.
 
 ## Call for Papers: Special Issue of Optimization Methods and Software
 
