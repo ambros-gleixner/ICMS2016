@@ -2,7 +2,7 @@
 
 ICMS 2016: [Home](http://icms2016.zib.de), [Sessions](http://icms2016.zib.de/sessions.html)
 
-> **NOTE**: The deadline for submission to our [Special Issue of Optimization Methods & Software](#call-for-papers-special-issue-of-optimization-methods-and-software) on *Mathematical Optimization Software*
+> **NOTE**: The submission deadline for the [Special Issue of Optimization Methods & Software](#call-for-papers-special-issue-of-optimization-methods-and-software)
 
 > ![OMS cover](omscover.jpg)
 
