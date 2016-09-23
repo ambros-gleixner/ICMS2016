@@ -179,6 +179,8 @@ PolySCIP is a new solver for multi-criteria integer as well as multi-criteria li
 
 Authors: [Adolfo R. Escobedo](https://sites.google.com/site/adolfoescobedo1) and Erick Moreno-Centeno
 
+Slides: [slides/escobedo.pdf](slides/escobedo.pdf)
+
 The Roundoff-Error-Free (REF) LU and Cholesky factorizations, combined with the REF substitution algorithms, allow systems of linear equations to be solved without accruing roundoff errors and without excessive matrix entry growth, thereby permitting linear and mixed-integer programming problems to be solved exactly and efficiently. These REF computational tools aim to make significant advances to the field of optimization for two reasons: (1) solutions yielded by commercial mathematical programming solvers do not come with a certificate of validity; (2) in-use exact solvers implement exact validation subroutines that rely on rational arithmetic which, unlike the featured framework, is hampered by its repeated use of expensive greatest common divisor operations to bound matrix entry growth.
 
 This work contains several computational tests showing that the REF framework solves systems of linear equations up to two orders of magnitude quicker than the exact rational arithmetic LU factorization method and requiring asymptotically half the memory. Moreover, we adapt Edmond’s integer-preserving Q-Matrix method to serve as a basic solution validation tool, and perform additional experiments that demonstrate that the REF factorization framework remains significantly superior in terms of memory requirements and computational effort.
