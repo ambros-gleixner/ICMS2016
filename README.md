@@ -76,6 +76,8 @@ When it comes to customized mathematical programming, SCIP is often the software
 
 Authors: [Shahadat Hossain](http://www.cs.uleth.ca/~hossain) and Ahamad Imtiaz Khan
 
+Slides: [slides/hossain.pdf](slides/hossain.pdf)
+
 We describe the architecture and implementation of DSJM, a software toolkit written in portable C++ that enables direct determination of sparse Jacobian matrices. Our design exploits the recently proposed unifying framework "pattern graph" and employs cache-friendly array-based sparse data structures. The pattern graph remains invariant for one-sided, two-sided, full column, and column-segments compression algorithms.
 The DSJM implements a greedy partitioning algorithm after the sparse matrix has been preprocessed with ordering heuristics for efficiency. In our numerical testing on 20 large-scale test instances (see *Graph Models and their efficient implementation for sparse Jacobian matrix determination, Disc. Appl. Math. 161(2013):1747-1754*) we have found that DSJM consistently produced better timing and partitions compared with similar software.
 
