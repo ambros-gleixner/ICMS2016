@@ -155,6 +155,8 @@ We will first give a short overview of applications of mixed-integer semidefinit
 
 Author: [Angelika Wiegele](http://wwwu.uni-klu.ac.at/anwiegel)
 
+Slides: [slides/wiegele.pdf](slides/wiegele.pdf)
+
 Max-cut is a classical NP-hard combinatorial optimization problem that has attracted the attention of many mathematicians and computer scientists during the past decades. The solver BiqMac is among the best performing solver for finding exact solutions of the Max-Cut problem. Any unconstrained binary quadratic problem can be transformed into a max-cut problem and thus can also be solved using BiqMac for instances of medium size.
 
 The algorithm inside BiqMac is based on a relaxation of max-cut using semidefinite programming (SDP). It consists of a branch and bound setting, using a basic SDP bound strengthened by the so-called triangle inequalities to obtain high-quality upper bounds. To solve this SDP relaxation a dynamic version of the bundle method is implemented.
