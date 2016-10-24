@@ -191,7 +191,9 @@ This work contains several computational tests showing that the REF framework so
 
 #### High-Precision Quadratic Programming by Iterative Refinement
 
-Authors: Ambros Gleixner, Sebastian Sager, and [Tobias Weber](https://www.math.uni-magdeburg.de/institute/imo/ag_sager/PEOPLE/Weber)
+Authors: Ambros Gleixner, Sebastian Sager, and [Tobias Weber](http://mathopt.de/Weber/)
+
+Slides: [slides/weber.pdf](slides/weber.pdf)
 
 Quadratic programming (QP) problems are an important class of optimization problems arising in many applications. Usually it suffice to (and most QP solvers do) approximate the solution of the QP in floating-point arithmetic. However, it may be of interest to calculate solutions of higher precision. We present the extension of iterative refinement for linear programming to QP problems.
 
